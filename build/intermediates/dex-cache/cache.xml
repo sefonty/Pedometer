@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9d1d218243429e12eb642928aaceab8b865fbd1e">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9b27b16861cdb8bde8ddc90f7013385a86341327\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa30fbf7c926b971edf91873fcda7e80dbd4a7cd">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_eb8c3ba18f4ed3eab14ae11fec6c3f5289313f46\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_92bb76afd573c027408000865d531431cba6c154\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_2a49f4da4fdc202aa67d4ce4c2c4b50a6dc68f88\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_781470a3f90c5f0a7b0f7c43e4829712fda37415\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_0d82a3ee0d14162790839154c9f0b8054df6c3d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_e7757d7576433d0583b17673f6ee105ce8f96a0a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_753520637b7a5b42a04e2ad30b45f16d26550504\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_a2979005ce4e6d08980db5520094bfa6ca358931\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_10a0e5b9ee98ba57d53595be76c21bc2083979a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_0d74b234bf94e0e9c68c9908d539caf5cc9d3755\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_a5a99b930d995cfb1e8d23ecfe8e272fd6e0f759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="be8401f36a50c0fd0718babff2bac5056e0ed8c1">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c41d773bb5f9bd3d8d818e595a8f0452cc364058\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_79ef159e4f9c5e8a679587299834cb54897c9324\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_fd34cc8cf1446070800500a8cd1d35bf0bc29d63\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="813ffb761db395d5dc28246cad6b6273e30c5b6a">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_52c3ffa842901acd2072ad21072ada4f7c9441e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_cd04c7f8d7d2f0afebabbe0f65b45c718cdc5a64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_88b82f06b12f2789987d67eb113a103a07c7a9d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_beeec0b5cda3fe5045c126387ea08e1235bb6374\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_12667f3c7fb3704a34f6254eb6a90cd3dcaa9bc6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_b5976e5a7537e77507db8d055dca93e02cc37f3c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_7d2eae60e1c1c60a61295f2c525c8f84be4afdde\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_b1ca4d31ae4ea645bbe2ef244310c7b615b50c07\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_2dafd9622e553b2c8a8938dfb5623fdd2c6571f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_bbda490044b5d3d434bf885efd95b6004b219ec1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_5a2eb2b20fe65128014825f6fd62c83f8da85131\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_37800a20e49b3d622515e20b81db3ccb12e537bf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_969b04b8ac90eb309d1c73449c3eea20ead84586\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_7389eec14154de8f1d74ed7f2b435a53b055854b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c04034c9d96b413014d9180360f6a3a0ee39e9bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_8213879d752cab9e045d3a0e71a03d672ca11183\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_cfba54c2ec8286228cc71f38dc39f3f1e24ac5db\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\panda\AndroidStudioProjects\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_2054ff5c5346f09f21217c7a0f73f6b6f58c1a5b\classes.dex" />
+    </item>
+
+</items>

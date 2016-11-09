@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pedometer</string>
+    <string name="cancel">Cancel</string>
+    <string name="distance">Distance</string>
+    <string name="distance_hint">Enter Distance Goal</string>
+    <string name="step_hint">Enter Step Goal</string>
+    <string name="time_hint">Enter Time Goal</string>
+    <string name="start">Start</string>
+    <string name="steps">Steps</string>
+    <string name="time">Time</string>
+
+</resources>
