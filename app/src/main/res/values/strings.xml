@@ -8,5 +8,6 @@
     <string name="start">Start</string>
     <string name="steps">Steps</string>
     <string name="time">Time</string>
+    <string name="goals_title">Goals(Optional)</string>
 
 </resources>

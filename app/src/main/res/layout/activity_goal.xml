@@ -19,7 +19,7 @@
 
     <TableRow>
         <TextView
-            android:text="Goals(Optional)"
+            android:text="@string/goals_title"
             android:layout_span="3"
             android:textSize="18sp"
             android:textColor="@android:color/black" />
