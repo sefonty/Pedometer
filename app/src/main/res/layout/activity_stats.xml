@@ -12,17 +12,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.utdallas.mxd153730.pedometer.StatsActivity">
+    tools:context="edu.utdallas.pedometer.StatsActivity">
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list"
-        android:layout_marginTop="240dp"
-
-         />
-
-
+        android:layout_marginTop="240dp"/>
 
     <TextView
         android:text="Period 1"
@@ -40,7 +36,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/button6"
         android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
+        android:layout_marginLeft="17dp"
         android:layout_marginStart="17dp"
         android:background="@drawable/right_arrow"
         android:layout_alignTop="@+id/textView2" />
@@ -51,7 +49,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/button7"
         android:layout_alignBottom="@+id/textView2"
+        android:layout_toLeftOf="@+id/textView2"
         android:layout_toStartOf="@+id/textView2"
+        android:layout_marginRight="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/left_arrow"
         android:layout_alignTop="@+id/textView2" />
@@ -66,6 +66,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
         android:id="@+id/seekBar" />
-
 
 </RelativeLayout>

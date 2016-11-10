@@ -17,13 +17,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".GraphActivity"
-                  android:parentActivityName=".MainActivity">
+                  android:parentActivityName=".MainActivity"
+                  android:screenOrientation="portrait">
         </activity>
 		<activity android:name=".StatsActivity"
-                  android:parentActivityName=".MainActivity">
+                  android:parentActivityName=".MainActivity"
+                  android:screenOrientation="portrait">
         </activity>
         <activity android:name=".GoalActivity"
-                  android:parentActivityName=".MainActivity">
+                  android:parentActivityName=".MainActivity"
+                  android:screenOrientation="portrait">
         </activity>
     </application>
 
