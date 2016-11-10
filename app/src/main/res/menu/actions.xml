@@ -1,0 +1,14 @@
+<!--Assignment 4 Team Members: Melissa Dagley and Scott Fontenarosa-->
+<!--Written By Scott Fontenarosa-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Add contact", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_action_goal"
+        android:title="@string/action_goal"
+        app:showAsAction="always"/>
+
+</menu>

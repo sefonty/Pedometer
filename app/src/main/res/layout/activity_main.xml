@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,81 +10,144 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.utdallas.mxd153730.pedometer.MainActivity">
+    tools:context="edu.utdallas.pedometer.MainActivity">
+
+    <!--NEW GOAL-->
+
+    <!--MORE (Stats/Graph)-->
+    <Button
+        android:id="@+id/button_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_more"
+        android:background="#2397f3"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="18sp"
+        android:onClick="openStats"
+        style="@style/Widget.AppCompat.Button.Colored"/>
 
     <TextView
-        android:text="6,472"
+        android:id="@+id/textView_steps"
+        android:text="@string/text_view_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_timeStarted"
+        android:layout_centerHorizontal="true"
+        android:textSize="72sp"
+        android:textColor="#409e30"
+        android:layout_marginTop="-10dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/CustomProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_steps"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="@string/text_view_steps_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentSteps"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:text="@string/text_view_steps_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/goalSteps"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView_timeStarted"
+        android:text="@string/text_view_time_started_sample"
+        tools:context="edu.utdallas.pedometer.MainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:id="@+id/textView"
-        android:textSize="60sp"
-        android:textColor="@android:color/holo_green_dark" />
+        android:layout_centerHorizontal="true"/>
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
+    <LinearLayout
+        android:id="@+id/button_linear_layout"
         android:layout_width="match_parent"
-        android:id="@+id/progressBar2"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:text="PAUSE"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/currentSteps"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/button"
-        android:textSize="14sp"
-        android:background="@android:color/holo_orange_light"
-        android:elevation="1dp"
-        android:textColor="@android:color/background_light" />
+        android:layout_marginTop="16dp">
 
-    <Button
-        android:text="RESET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button3"
-        android:textColor="@android:color/background_light"
-        android:background="@android:color/holo_green_dark" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0" >
+        </Space>
 
-    <Button
-        android:text="NEW GOAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="12dp"
-        android:id="@+id/button4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:color/holo_blue_dark"
-        android:textColor="@android:color/background_light"
-        android:onClick="newGoal"
-        />
+        <!--G0/PAUSE-->
+        <Button
+            android:id="@+id/button_go"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/button_go"
+            android:background="#39c83d"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            />
 
-    <Button
-        android:text="STOP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_red_dark"
-        android:textColor="@android:color/background_light" />
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="1dp"
+            android:layout_weight="0" >
+        </Space>
 
-    <Button
-        android:text="Stats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button5"
-        android:onClick="sendMessage"/>
+        <!--STOP-->
+        <Button
+            android:id="@+id/button_stop"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/button_stop"
+            android:background="#c21a5c"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="1dp"
+            android:layout_weight="0" >
+        </Space>
+
+        <!--RESET-->
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/button_reset"
+            android:background="#398f8f"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0" >
+        </Space>
+
+    </LinearLayout>
 
 </RelativeLayout>

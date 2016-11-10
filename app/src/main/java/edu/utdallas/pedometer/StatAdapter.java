@@ -3,7 +3,7 @@
  *
  * Used to inject the list view with existing contacts' first and last name and phone number
  */
-package edu.utdallas.mxd153730.pedometer;
+package edu.utdallas.pedometer;
 
 import java.util.ArrayList;
 import android.content.Context;

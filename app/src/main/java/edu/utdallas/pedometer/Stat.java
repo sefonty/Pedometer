@@ -3,7 +3,7 @@
  *
  * Contains all the details related to all stats
  */
-package edu.utdallas.mxd153730.pedometer;
+package edu.utdallas.pedometer;
 
 
 public class Stat
