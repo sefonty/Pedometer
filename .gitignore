@@ -72,3 +72,5 @@ local.properties
 .idea/workspace.xml
 .idea/libraries/support_vector_drawable_24_2_1.xml
 local.properties
+app/src/androidTest/java/edu/utdallas/pedometer/ExampleInstrumentedTest.java
+app/src/test/java/edu/utdallas/pedometer/ExampleUnitTest.java
