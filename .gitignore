@@ -124,3 +124,8 @@ gradle/wrapper/gradle-wrapper.properties
 gradlew
 build/generated/mockable-android-24.jar
 app/proguard-rules.pro
+.gradle
+.idea
+app\app.iml
+build\intermediates\dex-cache\cache.xml
+local.properties
