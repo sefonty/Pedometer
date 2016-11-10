@@ -17,6 +17,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /*
 import android.view.Gravity;
@@ -30,6 +34,13 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity
 {
     public static PeriodsHandler periodsHandler = new PeriodsHandler();
+    Date endTime = new Date();
+    Date curTime = new Date();
+    Date startTime = new Date();
+    Date curStartTime = new Date();
+    double distance = 0;
+    long duration = 0;
+    long currentSteps = 0;
 
     // Written By Melissa Dagley
     // Called when the main activity is created or every time it is navigated to
@@ -282,5 +293,49 @@ public class MainActivity extends AppCompatActivity
 
         // Bring up the stats view
         startActivity(intent);
+    }
+
+    public void resetGoal(View view) {
+
+        //Find the progress bar
+        ProgressBar progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        int inputProgress;
+
+        //Find all of the text views
+        TextView textViewSteps = (TextView)findViewById(R.id.textView_steps);
+        TextView textViewcurrentSteps = (TextView)findViewById(R.id.currentSteps);
+        TextView textViewStepsGoal = (TextView)findViewById(R.id.goalSteps);
+        TextView textViewTimeStarted = (TextView)findViewById(R.id.textView_timeStarted);
+
+        //Set a string to the current date/time to display at the top of the screen
+        String timeStarted = new SimpleDateFormat("MM/dd/yyyy HH:MM:ss a").format(new Date());
+
+        //reset the current time variable
+        curTime = new Date();
+
+        //set the end time to the current time
+        endTime = curTime;
+
+        //subtract the last known start time from the end time and add it to the duration variable
+        //curStartTime is set every time a goal starts or is restarted after a pause
+        duration += endTime.getTime() - curStartTime.getTime();
+
+        //Create a period object to hold the current data
+        Period newPeriod = new Period(currentSteps, distance, duration, startTime, endTime);
+
+        //Reset all of the text views, except the goal steps which stays the same
+        textViewSteps.setText("0");
+        textViewcurrentSteps.setText("0");
+
+        //Display the new start time
+        textViewTimeStarted.setText("Time Started: " + timeStarted);
+
+        //reset the progress bar
+        inputProgress = (int) ((0.0f / 10000.0f) * 100);
+        progressBar.setProgress(inputProgress);
+
+        //reset the variables
+        currentSteps = 0;
+        startTime = curTime;
     }
 }

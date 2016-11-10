@@ -140,6 +140,7 @@
             android:background="#398f8f"
             android:textColor="@android:color/white"
             android:textSize="18sp"
+            android:onClick="resetGoal"
             />
 
         <Space
