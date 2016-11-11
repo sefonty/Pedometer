@@ -20,7 +20,7 @@
     <string name="distance">Distance</string>
     <string name="distance_hint">Enter Distance Goal (Miles)</string>
     <string name="step_hint">Enter Step Goal (Steps)</string>
-    <string name="time_hint">Enter Time Goal (Hours)</string>
+    <string name="time_hint">Enter Time Goal (HH:MM)</string>
     <string name="button_goal_set">Set</string>
     <string name="steps">Steps</string>
     <string name="time">Time</string>

@@ -94,26 +94,37 @@ public class GoalActivity extends AppCompatActivity
         //Run if time goal check box is checked
         if(setTimeGoal.isChecked()) {
 
-            //Check if the field is blank
-            if(time.getText().toString().equals("")) {
+            //Check if the field is blank or in not in HH:MM format
+            if(
+                    time.getText().toString().equals("")
+                    || !(time.getText().toString()).matches("([0-9]{2}):([0-9]{2})")) {
 
-                System.out.println("Time goal field was blank\n");
+                //For Debugging
+                System.out.println("Time goal field was blank or did not contain a valid entry \n");
             }
 
             //if the field is not blank
             else{
 
-                //Set time goal equal to field value
-                timeGoal = Long.valueOf((String) time.getText().toString()).longValue();
+                //get the time input into the field
+                String inputTime = time.getText().toString();
+
+                //Split the string to find the hours and minutes entered
+                String[] split = inputTime.split(":");
+                long hours = Integer.valueOf(split[0]);
+                long minutes = Integer.valueOf(split[1]);
+
+                //convert the time entered to minutes and set it to the timeGoal variable
+                timeGoal = (hours*60)+minutes;
 
                 //for debugging purposes
-                System.out.println("Time Goal: " + timeGoal + " hours\n");
-                System.out.println("Time Goal: " + timeGoal * 60 + " minutes\n");
-                System.out.println("Time Goal: " + timeGoal * 60 * 60 + " seconds\n");
-                System.out.println("Time Goal: " + timeGoal * 60 * 60 * 1000 + " milliseconds\n");
+                System.out.println("Time Goal: " + hours + " hour(s) " + minutes + " minute(s)\n");
+                System.out.println("Time Goal: " + timeGoal + " minutes\n");
+                System.out.println("Time Goal: " + timeGoal * 60 + " seconds\n");
+                System.out.println("Time Goal: " + timeGoal * 60 * 1000 + " milliseconds\n");
 
                 //convert time goal to milliseconds
-                timeGoal = ((timeGoal * 60) * 60) * 1000;
+                timeGoal = (timeGoal * 60) * 1000;
 
             }
         }

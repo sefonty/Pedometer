@@ -58,7 +58,8 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:hint="@string/time_hint"
-            android:inputType="number" />
+            android:inputType="time"
+            android:maxLength="5" />
     </TableRow>
 
     <TableRow>
