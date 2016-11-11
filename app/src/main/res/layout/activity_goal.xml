@@ -18,7 +18,9 @@
              android:focusableInTouchMode="true" >
 
     <TableRow>
-        <CheckBox />
+        <CheckBox
+            android:id="@+id/step_checkbox"
+            />
         <TextView
             android:text="@string/steps"
             android:layout_weight="0"
@@ -38,7 +40,9 @@
     </TableRow>
 
     <TableRow>
-        <CheckBox />
+        <CheckBox
+            android:id="@+id/time_checkbox"
+            />
         <TextView
             android:text="@string/time"
             android:layout_weight="0"
@@ -58,7 +62,9 @@
     </TableRow>
 
     <TableRow>
-        <CheckBox />
+        <CheckBox
+            android:id="@+id/distance_checkbox"
+            />
         <TextView
             android:text="@string/distance"
             android:layout_weight="0"
@@ -116,7 +122,8 @@
             android:background="#398f3d"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:onClick="setGoal"/>
 
     </LinearLayout>
 

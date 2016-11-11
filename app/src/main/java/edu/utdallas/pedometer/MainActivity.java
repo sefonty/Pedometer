@@ -295,6 +295,7 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    //Written by Melissa Dagley
     public void resetGoal(View view) {
 
         //Find the progress bar
@@ -320,7 +321,7 @@ public class MainActivity extends AppCompatActivity
         //curStartTime is set every time a goal starts or is restarted after a pause
         duration += endTime.getTime() - curStartTime.getTime();
 
-        //Create a period object to hold the current data
+        //Create a period object to hold the data for the current time period
         Period newPeriod = new Period(currentSteps, distance, duration, startTime, endTime);
 
         //Reset all of the text views, except the goal steps which stays the same
