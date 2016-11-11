@@ -53,12 +53,12 @@
             android:textColor="@android:color/black" />
         <EditText
             android:id="@id/time_value"
-            android:inputType="textNoSuggestions|time"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:hint="@string/time_hint"/>
+            android:hint="@string/time_hint"
+            android:inputType="number" />
     </TableRow>
 
     <TableRow>

@@ -29,7 +29,7 @@ public class GoalActivity extends AppCompatActivity
         setContentView(R.layout.activity_goal);
 
         // Set title to say "Statistics"
-        String listViewTitle = this.getResources().getString(R.string.title_goals);
+        String listViewTitle = ("New Goal");
         this.setTitle(listViewTitle);
 
         // Create back button
@@ -50,6 +50,7 @@ public class GoalActivity extends AppCompatActivity
     //Written by Melissa Dagley
     public void setGoal(View view)
     {
+        //initialize all values to 0
         long stepGoal = 0;
         long timeGoal = 0;
         double distanceGoal = 0.0;
@@ -59,50 +60,102 @@ public class GoalActivity extends AppCompatActivity
         TextView time = (TextView)findViewById(R.id.time_value);
         TextView distance = (TextView)findViewById(R.id.distance);
 
+        //Find all of the check boxes
         CheckBox setStepGoal = (CheckBox)findViewById(R.id.step_checkbox);
         CheckBox setTimeGoal = (CheckBox)findViewById(R.id.time_checkbox);
         CheckBox setDistanceGoal = (CheckBox)findViewById(R.id.distance_checkbox);
 
+        //Run if the step goal check box is checked
         if(setStepGoal.isChecked()) {
 
-            stepGoal = Long.valueOf((String)step.getText().toString()).longValue();
-            System.out.println("Step Goal: " + stepGoal + "\n");
+            //Check if the field is blank
+            if(step.getText().toString().equals("")) {
 
+                System.out.println("Step goal field was blank\n");
+            }
+
+            //If the field is not blank
+            else{
+                //set the step goal value equal to the field value
+                stepGoal = Long.valueOf((String) step.getText().toString()).longValue();
+
+                //for debugging
+                System.out.println("Step Goal: " + stepGoal + "\n");
+            }
 
         }
 
         else{
 
+            //for debugging
             System.out.println("No Step Goal \n");
         }
 
+        //Run if time goal check box is checked
         if(setTimeGoal.isChecked()) {
-            timeGoal = Long.valueOf((String)time.getText().toString()).longValue();
-            System.out.println("Time Goal: " + timeGoal + " hours\n");
-            System.out.println("Time Goal: " + timeGoal*60 + " minutes\n");
-            System.out.println("Time Goal: " + timeGoal*60*60 + " seconds\n");
-            System.out.println("Time Goal: " + timeGoal*60*60*1000 + " milliseconds\n");
-            timeGoal = ((timeGoal*60)*60)*1000;
+
+            //Check if the field is blank
+            if(time.getText().toString().equals("")) {
+
+                System.out.println("Time goal field was blank\n");
+            }
+
+            //if the field is not blank
+            else{
+
+                //Set time goal equal to field value
+                timeGoal = Long.valueOf((String) time.getText().toString()).longValue();
+
+                //for debugging purposes
+                System.out.println("Time Goal: " + timeGoal + " hours\n");
+                System.out.println("Time Goal: " + timeGoal * 60 + " minutes\n");
+                System.out.println("Time Goal: " + timeGoal * 60 * 60 + " seconds\n");
+                System.out.println("Time Goal: " + timeGoal * 60 * 60 * 1000 + " milliseconds\n");
+
+                //convert time goal to milliseconds
+                timeGoal = ((timeGoal * 60) * 60) * 1000;
+
+            }
         }
 
         else {
 
+            //for debugging
             System.out.println("No Time Goal \n");
         }
 
+        //Run if distance goal check box is checked
         if(setDistanceGoal.isChecked()) {
 
-            distanceGoal = Double.parseDouble((String)distance.getText().toString());
-            System.out.println("Distance Goal: " + distanceGoal + " miles\n");
+            //Check if the field is blank
+            if(distance.getText().toString().equals("")) {
+
+                System.out.println("Distance goal field was blank\n");
+
+            }
+
+            //If the field is not blank
+            else{
+
+                //set distance goal to field value
+                distanceGoal = Double.parseDouble((String) distance.getText().toString());
+
+                //for debugging
+                System.out.println("Distance Goal: " + distanceGoal + " miles\n");
+
+            }
         }
 
         else {
 
+            //for debugging
             System.out.println("No Distance Goal \n");
         }
 
-
+        //Create a new goal object with the values from the fields, use 0 values for fields not checked
         Goals newGoal = new Goals(stepGoal, timeGoal, distanceGoal);
+
+        //for debugging
         System.out.println(newGoal.toString());
 
 
