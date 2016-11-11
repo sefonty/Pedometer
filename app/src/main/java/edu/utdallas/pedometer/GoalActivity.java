@@ -17,7 +17,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class GoalActivity extends AppCompatActivity
@@ -35,6 +37,15 @@ public class GoalActivity extends AppCompatActivity
         // Create back button
         ActionBar actionBar = getSupportActionBar(); // not getActionBar, because using newer ActionBarActivity (version 7)
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        Spinner spinner = (Spinner) findViewById(R.id.units_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.units_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
     }
 
     //Written by Melissa Dagley
@@ -64,6 +75,8 @@ public class GoalActivity extends AppCompatActivity
         CheckBox setStepGoal = (CheckBox)findViewById(R.id.step_checkbox);
         CheckBox setTimeGoal = (CheckBox)findViewById(R.id.time_checkbox);
         CheckBox setDistanceGoal = (CheckBox)findViewById(R.id.distance_checkbox);
+
+
 
         //Run if the step goal check box is checked
         if(setStepGoal.isChecked()) {
@@ -148,11 +161,14 @@ public class GoalActivity extends AppCompatActivity
             //If the field is not blank
             else{
 
+                Spinner spinner = (Spinner)findViewById(R.id.units_spinner);
+                String text = spinner.getSelectedItem().toString();
+
                 //set distance goal to field value
                 distanceGoal = Double.parseDouble((String) distance.getText().toString());
 
                 //for debugging
-                System.out.println("Distance Goal: " + distanceGoal + " miles\n");
+                System.out.println("Distance Goal: " + distanceGoal + " " + text+ "\n");
 
             }
         }

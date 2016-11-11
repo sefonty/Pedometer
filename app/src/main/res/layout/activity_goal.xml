@@ -24,17 +24,17 @@
         <TextView
             android:text="@string/steps"
             android:layout_weight="0"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:labelFor="@+id/steps_value"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textColor="@android:color/black" />
         <EditText
             android:id="@id/steps_value"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:hint="@string/step_hint"
             android:inputType="number" />
     </TableRow>
@@ -46,17 +46,17 @@
         <TextView
             android:text="@string/time"
             android:layout_weight="0"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:labelFor="@+id/time_value"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textColor="@android:color/black" />
         <EditText
             android:id="@id/time_value"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:hint="@string/time_hint"
             android:inputType="time"
             android:maxLength="5" />
@@ -69,10 +69,10 @@
         <TextView
             android:text="@string/distance"
             android:layout_weight="0"
-            android:layout_width="100dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:labelFor="@+id/distance"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textColor="@android:color/black" />
         <EditText
             android:id="@id/distance"
@@ -80,8 +80,12 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:hint="@string/distance_hint"/>
+        <Spinner
+            android:id="@+id/units_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </TableRow>
 
 
