@@ -38,6 +38,7 @@ public class GoalActivity extends AppCompatActivity
         ActionBar actionBar = getSupportActionBar(); // not getActionBar, because using newer ActionBarActivity (version 7)
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        //Sets up the spinner for the units selection for distance goals
         Spinner spinner = (Spinner) findViewById(R.id.units_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -49,6 +50,7 @@ public class GoalActivity extends AppCompatActivity
     }
 
     //Written by Melissa Dagley
+    //Action for the cancel button, exits goal screen and returns to main screen
     public void cancelGoal(View mainView)
     {
         // Create an intent to tell the main view to open
@@ -59,6 +61,8 @@ public class GoalActivity extends AppCompatActivity
     }
 
     //Written by Melissa Dagley
+    //Action for set goal button, allows user to set different types of goals
+    //Step goals, time goals, distance goals, or any combination
     public void setGoal(View view)
     {
         //initialize all values to 0
@@ -90,7 +94,7 @@ public class GoalActivity extends AppCompatActivity
             //If the field is not blank
             else{
                 //set the step goal value equal to the field value
-                stepGoal = Long.valueOf((String) step.getText().toString()).longValue();
+                stepGoal = Long.valueOf((String) step.getText().toString());
 
                 //for debugging
                 System.out.println("Step Goal: " + stepGoal + "\n");

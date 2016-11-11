@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity
         TextView textViewTimeStarted = (TextView)findViewById(R.id.textView_timeStarted);
 
         //Set a string to the current date/time to display at the top of the screen
-        String timeStarted = new SimpleDateFormat("MM/dd/yyyy HH:MM:ss a").format(new Date());
+        String timeStarted = new SimpleDateFormat("hh:mm a MM/dd/yyyy").format(new Date());
 
         //reset the current time variable
         curTime = new Date();
