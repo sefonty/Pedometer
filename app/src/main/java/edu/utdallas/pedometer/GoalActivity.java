@@ -80,33 +80,43 @@ public class GoalActivity extends AppCompatActivity
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+            //Written by Melissa Dagley
+            //Used to populate fields with a selected suggested goal
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
                 // ListView Clicked item index
-                int itemPosition     = position;
+                int itemPosition = position;
 
+                //Find all of the text fields
                 TextView step_goal = (TextView)findViewById(R.id.steps_value);
                 TextView time_goal = (TextView)findViewById(R.id.time_value);
                 TextView distance_goal = (TextView)findViewById(R.id.distance);
 
+                //Find all of the check boxes
                 CheckBox step_goal_checkbox = (CheckBox)findViewById(R.id.step_checkbox);
                 CheckBox time_goal_checkbox = (CheckBox)findViewById(R.id.time_checkbox);
                 CheckBox distance_goal_checkbox = (CheckBox)findViewById(R.id.distance_checkbox);
 
+                //Find the units spinner for distance
                 Spinner units_spinner = (Spinner)findViewById(R.id.units_spinner);
 
+
+                //reset all of the field values
                 step_goal.setText("");
                 time_goal.setText("");
                 distance_goal.setText("");
 
+                //reset all of the check boxes
                 step_goal_checkbox.setChecked(false);
                 time_goal_checkbox.setChecked(false);
                 distance_goal_checkbox.setChecked(false);
 
+                //reset the spinner
                 units_spinner.setSelection(0);
 
+                //check to see which goal was selected and populate the form accordingly
                 if(itemPosition == 0)
                 {
                     step_goal.setText("10000");
@@ -287,6 +297,30 @@ public class GoalActivity extends AppCompatActivity
 
                 //for debugging
                 System.out.println("Distance Goal: " + distanceGoal + " " + text+ "\n");
+
+                if(text.equals("Meters"))
+                {
+                    //convert from meters to miles
+                    distanceGoal = distanceGoal/1609.344;
+                }
+
+                if(text.equals("Yards"))
+                {
+                    //convert from yards to miles
+                    distanceGoal = distanceGoal*0.00056818;
+                }
+
+                if(text.equals("KM"))
+                {
+                    //convert from kilometers to miles
+                    distanceGoal = distanceGoal*0.62137;
+                }
+
+                if(text.equals("Feet"))
+                {
+                    //convert from feet to miles
+                    distanceGoal = distanceGoal/5280;
+                }
 
             }
         }
