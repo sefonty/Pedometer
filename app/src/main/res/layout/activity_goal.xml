@@ -89,48 +89,55 @@
     </TableRow>
 
 
-    <LinearLayout
-        android:id="@+id/goal_button_linear_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+    <TableRow>
 
         <Button
             android:text="@string/cancel"
             android:textColor="@android:color/white"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginEnd="4dp"
             android:background="#c21a5c"
             android:onClick="cancelGoal"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="18sp"
+            android:layout_column="2"
             />
 
-        <Space
-            android:layout_width="4dp"
-            android:layout_height="1dp"
-            android:layout_weight="0" >
-        </Space>
+
 
         <Button
             android:text="@string/button_goal_set"
             android:textColor="@android:color/white"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="4dp"
             android:layout_marginEnd="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
             android:background="#398f3d"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="18sp"
-            android:onClick="setGoal"/>
+            android:onClick="setGoal"
+            android:layout_column="2"/>
 
-    </LinearLayout>
+        </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Suggested Goals"
+            android:layout_span="4"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            />
+    </TableRow>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/suggested_goal_list"
+            android:layout_marginTop="9dp" />
+
+
+
+
 
 
 </TableLayout>

@@ -17,13 +17,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class GoalActivity extends AppCompatActivity
 {
+    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -47,6 +50,117 @@ public class GoalActivity extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        // Get ListView object from xml
+        listView = (ListView) findViewById(R.id.suggested_goal_list);
+
+        // Defined Array values to show in ListView
+        String[] values = new String[] { "10,000 Steps",
+                "1 Mile",
+                "5 K",
+                "10 K",
+                "24 Hours",
+                "30 Minutes",
+                "15,000 Steps",
+                "1 Hour"
+        };
+
+        // Define a new Adapter
+        // First parameter - Context
+        // Second parameter - Layout for the row
+        // Third parameter - ID of the TextView to which the data is written
+        // Forth - the Array of data
+
+        ArrayAdapter<String> suggestedGoalsAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+
+
+        // Assign adapter to ListView
+        listView.setAdapter(suggestedGoalsAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                // ListView Clicked item index
+                int itemPosition     = position;
+
+                TextView step_goal = (TextView)findViewById(R.id.steps_value);
+                TextView time_goal = (TextView)findViewById(R.id.time_value);
+                TextView distance_goal = (TextView)findViewById(R.id.distance);
+
+                CheckBox step_goal_checkbox = (CheckBox)findViewById(R.id.step_checkbox);
+                CheckBox time_goal_checkbox = (CheckBox)findViewById(R.id.time_checkbox);
+                CheckBox distance_goal_checkbox = (CheckBox)findViewById(R.id.distance_checkbox);
+
+                Spinner units_spinner = (Spinner)findViewById(R.id.units_spinner);
+
+                step_goal.setText("");
+                time_goal.setText("");
+                distance_goal.setText("");
+
+                step_goal_checkbox.setChecked(false);
+                time_goal_checkbox.setChecked(false);
+                distance_goal_checkbox.setChecked(false);
+
+                units_spinner.setSelection(0);
+
+                if(itemPosition == 0)
+                {
+                    step_goal.setText("10000");
+                    step_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 1)
+                {
+                    distance_goal.setText("1");
+                    units_spinner.setSelection(0);
+                    distance_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 2)
+                {
+                    distance_goal.setText("5");
+                    units_spinner.setSelection(3);
+                    distance_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 3)
+                {
+                    distance_goal.setText("10");
+                    units_spinner.setSelection(3);
+                    distance_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 4)
+                {
+                    time_goal.setText("24:00");
+                    time_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 5)
+                {
+                    time_goal.setText("00:30");
+                    time_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 6)
+                {
+                    step_goal.setText("15000");
+                    step_goal_checkbox.setChecked(true);
+                }
+
+                if(itemPosition == 7)
+                {
+                    time_goal.setText("01:00");
+                    time_goal_checkbox.setChecked(true);
+                }
+
+            }
+
+        });
     }
 
     //Written by Melissa Dagley
@@ -214,4 +328,6 @@ public class GoalActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
