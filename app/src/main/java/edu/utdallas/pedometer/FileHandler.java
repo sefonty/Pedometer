@@ -260,12 +260,14 @@ public class FileHandler
         long goalSteps;
         long goalTime;
         double goalDistance;
+        String distanceUnits;
 
         try
         {
             goalSteps = Long.parseLong(lineDelimited[0]);
             goalTime = Long.parseLong(lineDelimited[1]);
             goalDistance =  Double.parseDouble(lineDelimited[2]);
+            distanceUnits = lineDelimited[3];
         }
         catch (ArrayIndexOutOfBoundsException e)
         {
@@ -276,10 +278,11 @@ public class FileHandler
             goalSteps = 0L;
             goalTime = 0L;
             goalDistance = 0.0;
+            distanceUnits = "Miles";
         }
 
         // create period object to hold each period
-        loadedGoals = new Goals(goalSteps, goalTime, goalDistance);
+        loadedGoals = new Goals(goalSteps, goalTime, goalDistance, distanceUnits);
 
         return loadedGoals;
     }

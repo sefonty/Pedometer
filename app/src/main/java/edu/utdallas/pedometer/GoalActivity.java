@@ -24,9 +24,12 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class GoalActivity extends AppCompatActivity
 {
     ListView listView;
+    ArrayList<Goals> savedGoals = new ArrayList<Goals>();
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -193,6 +196,7 @@ public class GoalActivity extends AppCompatActivity
         long stepGoal = 0;
         long timeGoal = 0;
         double distanceGoal = 0.0;
+        String distanceUnits = "Miles";
 
         //Find all of the text fields
         TextView step = (TextView)findViewById(R.id.steps_value);
@@ -302,24 +306,28 @@ public class GoalActivity extends AppCompatActivity
                 {
                     //convert from meters to miles
                     distanceGoal = distanceGoal/1609.344;
+                    distanceUnits = "Meters";
                 }
 
                 if(text.equals("Yards"))
                 {
                     //convert from yards to miles
                     distanceGoal = distanceGoal*0.00056818;
+                    distanceUnits = "Yards";
                 }
 
                 if(text.equals("KM"))
                 {
                     //convert from kilometers to miles
                     distanceGoal = distanceGoal*0.62137;
+                    distanceUnits = "KM";
                 }
 
                 if(text.equals("Feet"))
                 {
                     //convert from feet to miles
                     distanceGoal = distanceGoal/5280;
+                    distanceUnits = "Feet";
                 }
 
             }
@@ -332,10 +340,11 @@ public class GoalActivity extends AppCompatActivity
         }
 
         //Create a new goal object with the values from the fields, use 0 values for fields not checked
-        Goals newGoal = new Goals(stepGoal, timeGoal, distanceGoal);
+        Goals newGoal = new Goals(stepGoal, timeGoal, distanceGoal, distanceUnits);
 
         //for debugging
         System.out.println(newGoal.toString());
+        System.out.println(newGoal.goalName());
 
 
         // Create an intent to tell the main view to open

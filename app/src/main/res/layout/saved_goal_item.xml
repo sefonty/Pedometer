@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Final Project Team Members: Melissa Dagley and Scott Fontenarosa-->
+<!--Written By Melissa Dagley-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip">
+
+    <!--Goal Name-->
+    <TextView
+        android:id="@+id/goalName"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:textSize="14sp"
+        android:gravity="start"
+        />
+</LinearLayout>

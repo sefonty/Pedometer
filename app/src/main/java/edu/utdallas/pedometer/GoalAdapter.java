@@ -1,7 +1,7 @@
 /**
  * Final Project Team Members: Melissa Dagley and Scott Fontenarosa
  *
- * Used to inject the list view with user's stats for each period
+ * Used to inject the list view with saved goals
  */
 package edu.utdallas.pedometer;
 
@@ -14,30 +14,30 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
-public class StatAdapter extends ArrayAdapter<Stat>
+public class GoalAdapter extends ArrayAdapter<Goals>
 {
 
-    // Declaring our ArrayList of stats
-    private ArrayList<Stat> stats;
+    // Declaring our ArrayList of goals
+    private ArrayList<Goals> goals;
 
     /**
      * Written By Melissa Dagley
      *
      * Here we must override the constructor for ArrayAdapter
-     * the only variable we care about now is ArrayList<Stat> objects,
+     * the only variable we care about now is ArrayList<Goals> objects,
      * because it is the list of objects we want to display.
      */
-    public StatAdapter(Context context, int textViewResourceId, ArrayList<Stat> stats)
+    public GoalAdapter(Context context, int textViewResourceId, ArrayList<Goals> goals)
     {
-        super(context, textViewResourceId, stats);
-        this.stats = stats;
+        super(context, textViewResourceId, goals);
+        this.goals = goals;
     }
 
     /**
      * Written By Melissa Dagley
      *
      * We are overriding the getView method here - this is what defines how each
-     * list stat will look.
+     * list contact will look.
      */
     public View getView(int position, View convertView, ViewGroup parent)
     {
@@ -49,7 +49,7 @@ public class StatAdapter extends ArrayAdapter<Stat>
         if (localView == null)
         {
             LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            localView = inflater.inflate(R.layout.list_item, null);
+            localView = inflater.inflate(R.layout.saved_goal_item, null);
         }
 
 		/*
@@ -57,38 +57,27 @@ public class StatAdapter extends ArrayAdapter<Stat>
 		 * The variable simply refers to the position of the current object in the list.
 		 * (The ArrayAdapter iterates through the list we sent it)
 		 *
-		 * Therefore, currentStatPosition refers to the current Stat object's index in the list
+		 * Therefore, currentGoalPosition refers to the current Goal object's index in the list
 		 */
-        Stat currentStatPosition = stats.get(position);
+        Goals currentGoalPosition = goals.get(position);
 
-        if (currentStatPosition != null)
+        if (currentGoalPosition != null)
         {
             // This is how you obtain a reference to the TextViews.
             // These TextViews are created in the XML files we defined.
-            TextView statName = (TextView)localView.findViewById(R.id.statName);
-            TextView statValue = (TextView)localView.findViewById(R.id.statValue);
+            TextView goalName = (TextView)localView.findViewById(R.id.goalName);
+
 
             // Check to see if each individual TextView is null.
             // If not, assign some text.
-            if (statName != null)
+            if (goalName != null)
             {
                 // Set Name
-                String name = currentStatPosition.getStatName();
-
-
-
-                statName.setText(name);
+                String name = currentGoalPosition.goalName();
+                goalName.setText(name);
             }
 
-            if (statValue != null)
-            {
-                // Set stat value
-                String value = currentStatPosition.getStatValue();
 
-
-
-                statValue.setText(value);
-            }
         }
 
         // The view must be returned to our list activity
