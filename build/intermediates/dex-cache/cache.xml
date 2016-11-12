@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="968f3b16dfce1d4f30dd8557b8e8cdb57cb47108">
+        sha1="acfc02dc69ea2a2d10a333b0296b93ee703c7c3b">
         <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9b27b16861cdb8bde8ddc90f7013385a86341327\classes.dex" />
     </item>
     <item
@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c990f33ea0d455a22d9ed5aafaa35827af49ca0f">
+        sha1="fa9f937424a5664f4540543665c0e8473a2a0286">
         <dex dex="C:\Users\panda\Documents\GitHub\Pedometer\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_eb8c3ba18f4ed3eab14ae11fec6c3f5289313f46\classes.dex" />
     </item>
     <item

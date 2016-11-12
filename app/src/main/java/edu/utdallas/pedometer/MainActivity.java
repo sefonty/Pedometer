@@ -41,20 +41,22 @@ public class MainActivity extends AppCompatActivity
     double distance = 0;
     long duration = 0;
     long currentSteps = 0;
+    int inputProgress = (int) ((6472.0f / 10000.0f) * 100);
 
     // Written By Melissa Dagley
     // Called when the main activity is created or every time it is navigated to
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         // Set layout to be activity_main.xml
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // Get reference to progress bar in XML
         ProgressBar progressBar = (ProgressBar)findViewById(R.id.progressBar);
-        int inputProgress = (int) ((6472.0f / 10000.0f) * 100);
         progressBar.setProgress(inputProgress);
+
 
         // Set title to say "Pedometer"
         String listViewTitle = this.getResources().getString(R.string.main_label);
@@ -70,6 +72,12 @@ public class MainActivity extends AppCompatActivity
         // Is there data being sent to this list view activity?
         if (getIntent()!= null)
         {
+
+            TextView goal = (TextView)findViewById(R.id.goalSteps);
+            View view = (View)findViewById(android.R.id.content);
+            resetGoal(view);
+
+
             // If so, retrieve the data
             Intent intent = getIntent();
             Bundle bundle = intent.getExtras();
@@ -77,61 +85,77 @@ public class MainActivity extends AppCompatActivity
             if (bundle != null)
             {
                 // Retrieve action performed in details view (modify/delete/new)
-                String message = bundle.getString("Flag");
+                boolean stepFlag = bundle.getBoolean("Step Flag");
+                boolean timeFlag = bundle.getBoolean("Time Flag");
+                boolean distanceFlag = bundle.getBoolean("Distance Flag");
 
                 // New period action was performed
-                if (message != null && message.equals("newSave"))
+                if (stepFlag)
                 {
-                    // Retrieve data of new period
-                    /*
-                    String fName = bundle.getString("First Name");
-                    String lName = bundle.getString("Last Name");
-                    String p = bundle.getString("Phone");
-                    String e = bundle.getString("Email");
+                    Long stepGoal = bundle.getLong("Steps");
+                    int inputProgress = (int)((0.0f/stepGoal)*100);
+                    progressBar.setProgress(inputProgress);
+                    goal.setText(stepGoal.toString());
 
-                    // Create new period object and save to list
-                    Period newPeriod = new Period(fName, lName, p, e);
-                    periodsHandler.addPeriod(newPeriod);
-                    */
+
                 }
                 // Modify period action was performed
-                else if (message != null && message.equals("modify"))
+                if (timeFlag)
                 {
-                    /*
-                    // Retrieve data of modified period
-                    String fName = bundle.getString("First Name");
-                    String lName = bundle.getString("Last Name");
-                    String p = bundle.getString("Phone");
-                    String e = bundle.getString("Email");
-                    int indexToModify = bundle.getInt("Position"); // index to modify
-                    */
+                    if(!stepFlag)
+                    {
+                        Long timeGoal = bundle.getLong("Time");
+                        int inputProgress = (int)((0.0f/timeGoal)*100);
+                        progressBar.setProgress(inputProgress);
 
-                    // Used for Debugging
-                    /*
-                    System.out.println("Position: " + i+"\n");
-                    System.out.println("Period to modify: " + periodsHandler.getPeriod(i).toString()+"\n");
-                    //*/
+                        //get the hours
+                        long hours = (timeGoal/(1000*60*60));
 
-                    /*
-                    // Create period object and overwrite period in list at the specified index
-                    Period modifiedPeriod = new Period(fName, lName, p, e);
-                    periodsHandler.modifyPeriod(indexToModify, modifiedPeriod);
-                    */
+                        //get the minutes
+                        long minutes = (timeGoal/(1000*60)) % 60;
+
+                        //if at least 1 hour
+                        if(hours > 0)
+                        {
+                            if(minutes > 0) {
+                                //print hours and minutes
+
+                                if(hours == 1)
+                                    goal.setText(hours + " hour " + minutes + " mins");
+                                else
+                                   goal.setText(hours + " hours " + minutes + " mins");
+                            }
+
+                            //just print hours if no minutes
+                            else {
+                                if (hours == 1)
+                                   goal.setText(hours + " hour");
+                                else
+                                    goal.setText(hours + " hours");
+                            }
+                        }
+
+                        else{
+
+                            //if less than 1 hour, print minutes
+                            goal.setText(minutes + " mins ");
+                        }
+
+                    }
                 }
                 // Delete period action was performed
-                else if (message != null && message.equals("delete"))
+                if (distanceFlag)
                 {
-                    // Retrieve which period (index) to delete
-                    int indexToDelete = bundle.getInt("Position");
-
-                    // Used for Debugging
-                    /*
-                    System.out.println("Position: " + i+"\n");
-                    System.out.println("Period to remove: " + periodsHandler.getPeriod(i).toString()+"\n");
-                    //*/
-
-                    // Delete the period object from the list
-                    periodsHandler.deletePeriod(indexToDelete);
+                    if(!stepFlag && !timeFlag)
+                    {
+                        Double distanceGoal = bundle.getDouble("Distance");
+                        String units = bundle.getString("Units");
+                        Goals tempGoal = new Goals(0, 0, distanceGoal, units);
+                        int inputProgress = (int)((0.0f/distanceGoal)*100);
+                        progressBar.setProgress(inputProgress);
+                        String tempString = tempGoal.goalName();
+                        goal.setText(tempString);
+                    }
                 }
             }
         }

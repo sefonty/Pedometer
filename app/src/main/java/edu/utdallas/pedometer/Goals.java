@@ -93,6 +93,7 @@ public class Goals
     public String goalName()
     {
         String name="";
+        double tempGoalDistance = 0;
         //Checks if there is a step goal
         if(goalSteps != 0)
         {
@@ -151,56 +152,62 @@ public class Goals
                 //add goal to string in miles
 
                 if(goalDistance == 1)
-                    name+= "1 Mile ";
+                {name+= "1 Mile ";}
                 else
-                name += (formatter.format(goalDistance)) + " Miles";
+                {name += (formatter.format(goalDistance)) + " Miles";}
             }
 
             //if the goal is in another unit, then convert it to the appropriate unit and print
             //the goal and it's unit
-            else{
+            else
+            {
                 if(distanceUnits.equals("Meters"))
                 {
+                    System.out.println("Units is in Meters");
                     //convert from miles to meters
-                    goalDistance = goalDistance*1609.344;
+                    tempGoalDistance = goalDistance*1609.344;
 
-                    if(goalDistance == 1)
-                        name+= "1 Meter ";
+                    if(tempGoalDistance == 1)
+                    {name+= "1 Meter ";}
                     else
-                    name += (formatter.format(goalDistance)) + " Meters";
+                    {name += (formatter.format(tempGoalDistance)) + " Meters";}
                 }
                 if(distanceUnits.equals("Yards"))
                 {
+                    System.out.println("Units is in yards");
                     //convert from miles to yards
-                    goalDistance = goalDistance/0.00056818;
+                    tempGoalDistance = goalDistance/0.00056818;
 
-                    if(goalDistance == 1)
-                        name+= "1 Yard ";
+                    if(tempGoalDistance == 1)
+                    {name+= "1 Yard ";}
                     else
-                    name += (formatter.format(goalDistance)) + " Yards";
+                    {name += (formatter.format(tempGoalDistance)) + " Yards";}
                 }
 
                 if(distanceUnits.equals("KM"))
                 {
+                    System.out.println("units are in km");
                     //convert from miles to km
-                    goalDistance = goalDistance/0.62137;
+                    tempGoalDistance = goalDistance/0.62137;
 
-                    if(goalDistance == 1)
-                        name+= "1 K ";
+                    if(tempGoalDistance == 1)
+                    {name+= "1 K ";}
                     else
-                    name += (formatter.format(goalDistance)) + " K";
+                    {name += (formatter.format(tempGoalDistance)) + " K";}
                 }
 
                 if(distanceUnits.equals("Feet"))
                 {
                     //convert from miles to feet
-                    goalDistance = goalDistance*5280;
+                    tempGoalDistance = goalDistance*5280;
 
-                    if(goalDistance == 1)
-                        name+= "1 Foot ";
+                    if(tempGoalDistance == 1)
+                    {name+= "1 Foot ";}
                     else
-                    name += (formatter.format(goalDistance)) + " Feet";
+                    {name += (formatter.format(tempGoalDistance)) + " Feet";}
                 }
+
+
             }
         }
 

@@ -30,6 +30,7 @@ public class GoalActivity extends AppCompatActivity
 {
     ListView listView;
     ArrayList<Goals> savedGoals = new ArrayList<Goals>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -57,16 +58,37 @@ public class GoalActivity extends AppCompatActivity
         // Get ListView object from xml
         listView = (ListView) findViewById(R.id.suggested_goal_list);
 
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "10,000 Steps",
-                "1 Mile",
-                "5 K",
-                "10 K",
-                "24 Hours",
-                "30 Minutes",
-                "15,000 Steps",
-                "1 Hour"
-        };
+
+
+
+            Goals suggestedGoal1 = new Goals(10000, 0, 0.0, "Miles");
+            savedGoals.add(suggestedGoal1);
+
+            Goals suggestedGoal2 = new Goals(0, 0, 1.0, "Miles");
+            savedGoals.add(suggestedGoal2);
+
+            Goals suggestedGoal3 = new Goals(0, 0, 3.10686, "KM");
+            savedGoals.add(suggestedGoal3);
+
+            System.out.println(suggestedGoal3.toString());
+
+            Goals suggestedGoal4 = new Goals(0, 0, 6.21371, "KM");
+            savedGoals.add(suggestedGoal4);
+
+            System.out.println(suggestedGoal4.toString());
+
+            Goals suggestedGoal5 = new Goals(0, ((24 * 60) * 60) * 1000, 0.0, "Miles");
+            savedGoals.add(suggestedGoal5);
+
+            Goals suggestedGoal6 = new Goals(0, (30 * 60) * 1000, 0.0, "Miles");
+            savedGoals.add(suggestedGoal6);
+
+            Goals suggestedGoal7 = new Goals(15000, 0, 0.0, "Miles");
+            savedGoals.add(suggestedGoal7);
+
+            Goals suggestedGoal8 = new Goals(0, (60* 60) * 1000, 0.0, "Miles");
+            savedGoals.add(suggestedGoal8);
+
 
         // Define a new Adapter
         // First parameter - Context
@@ -74,10 +96,9 @@ public class GoalActivity extends AppCompatActivity
         // Third parameter - ID of the TextView to which the data is written
         // Forth - the Array of data
 
-        ArrayAdapter<String> suggestedGoalsAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
 
 
+        GoalAdapter suggestedGoalsAdapter = new GoalAdapter(this, R.layout.saved_goal_item, savedGoals);
         // Assign adapter to ListView
         listView.setAdapter(suggestedGoalsAdapter);
 
@@ -182,6 +203,8 @@ public class GoalActivity extends AppCompatActivity
     {
         // Create an intent to tell the main view to open
         Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
         // Bring up the stats view
         startActivity(intent);
@@ -192,6 +215,9 @@ public class GoalActivity extends AppCompatActivity
     //Step goals, time goals, distance goals, or any combination
     public void setGoal(View view)
     {
+        boolean stepFlag = false;
+        boolean timeFlag = false;
+        boolean distanceFlag = false;
         //initialize all values to 0
         long stepGoal = 0;
         long timeGoal = 0;
@@ -223,7 +249,7 @@ public class GoalActivity extends AppCompatActivity
             else{
                 //set the step goal value equal to the field value
                 stepGoal = Long.valueOf((String) step.getText().toString());
-
+                stepFlag = true;
                 //for debugging
                 System.out.println("Step Goal: " + stepGoal + "\n");
             }
@@ -270,7 +296,7 @@ public class GoalActivity extends AppCompatActivity
 
                 //convert time goal to milliseconds
                 timeGoal = (timeGoal * 60) * 1000;
-
+                timeFlag = true;
             }
         }
 
@@ -330,6 +356,8 @@ public class GoalActivity extends AppCompatActivity
                     distanceUnits = "Feet";
                 }
 
+                distanceFlag = true;
+
             }
         }
 
@@ -341,6 +369,7 @@ public class GoalActivity extends AppCompatActivity
 
         //Create a new goal object with the values from the fields, use 0 values for fields not checked
         Goals newGoal = new Goals(stepGoal, timeGoal, distanceGoal, distanceUnits);
+        savedGoals.add(newGoal);
 
         //for debugging
         System.out.println(newGoal.toString());
@@ -349,8 +378,21 @@ public class GoalActivity extends AppCompatActivity
 
         // Create an intent to tell the main view to open
         Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+        Bundle goalBundle = new Bundle();
+        goalBundle.putLong("Steps", stepGoal);
+        goalBundle.putLong("Time", timeGoal);
+        goalBundle.putDouble("Distance", distanceGoal);
+        goalBundle.putString("Units", distanceUnits);
+
+        goalBundle.putBoolean("Step Flag", stepFlag);
+        goalBundle.putBoolean("Time Flag", timeFlag);
+        goalBundle.putBoolean("Distance Flag", distanceFlag);
 
         // Bring up the stats view
+        intent.putExtras(goalBundle);
         startActivity(intent);
     }
 

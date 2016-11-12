@@ -75,6 +75,8 @@ public class GoalAdapter extends ArrayAdapter<Goals>
                 // Set Name
                 String name = currentGoalPosition.goalName();
                 goalName.setText(name);
+
+                System.out.println(currentGoalPosition.toString());
             }
 
 
