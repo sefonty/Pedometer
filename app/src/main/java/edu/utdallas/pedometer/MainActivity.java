@@ -69,9 +69,11 @@ public class MainActivity extends AppCompatActivity
             periodsHandler.setFileHandlerContext(getApplicationContext());
         }
 
+        //Written by Melissa Dagley
         // Is there data being sent to this list view activity?
         if (getIntent()!= null)
         {
+
 
             TextView goal = (TextView)findViewById(R.id.goalSteps);
             View view = (View)findViewById(android.R.id.content);
@@ -347,6 +349,9 @@ public class MainActivity extends AppCompatActivity
 
         //Create a period object to hold the data for the current time period
         Period newPeriod = new Period(currentSteps, distance, duration, startTime, endTime);
+        periodsHandler.addPeriod(newPeriod);
+
+        System.out.println(periodsHandler.toString());
 
         //Reset all of the text views, except the goal steps which stays the same
         textViewSteps.setText("0");
