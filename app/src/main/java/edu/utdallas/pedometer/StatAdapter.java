@@ -1,7 +1,7 @@
 /**
- * Assignment 4 Team Members: Melissa Dagley and Scott Fontenarosa
+ * Final Project Team Members: Melissa Dagley and Scott Fontenarosa
  *
- * Used to inject the list view with existing contacts' first and last name and phone number
+ * Used to inject the list view with user's stats for each period
  */
 package edu.utdallas.pedometer;
 
@@ -37,7 +37,7 @@ public class StatAdapter extends ArrayAdapter<Stat>
      * Written By Melissa Dagley
      *
      * We are overriding the getView method here - this is what defines how each
-     * list contact will look.
+     * list stat will look.
      */
     public View getView(int position, View convertView, ViewGroup parent)
     {
@@ -57,7 +57,7 @@ public class StatAdapter extends ArrayAdapter<Stat>
 		 * The variable simply refers to the position of the current object in the list.
 		 * (The ArrayAdapter iterates through the list we sent it)
 		 *
-		 * Therefore, currentContactPosition refers to the current Contact object's index in the list
+		 * Therefore, currentStatPosition refers to the current Stat object's index in the list
 		 */
         Stat currentStatPosition = stats.get(position);
 
@@ -82,7 +82,7 @@ public class StatAdapter extends ArrayAdapter<Stat>
 
             if (statValue != null)
             {
-                // Set Phone Number
+                // Set stat value
                 String value = currentStatPosition.getStatValue();
 
 
